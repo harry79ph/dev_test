@@ -7,7 +7,7 @@ import { ListState } from './context/Context';
 
 const App = () => {
 
-  const { loadPlanets, sortByDate } = ListState();
+  const { loadPlanets } = ListState();
 
   const getData = async () => {
     try {
