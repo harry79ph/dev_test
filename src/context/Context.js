@@ -8,9 +8,15 @@ const initialState = {
 }
 
 const Context = ({ children }) => {
+  
   const [items, setItems] = useState(initialState);
   const loadPlanets = (data) => {
-    setItems({ ...items, planets: [...data] });
+    setItems({ ...items,
+      planets: [...data].sort(
+        (a, b) =>
+          new Date(a.releasedate).getTime() - new Date(b.releasedate).getTime(),
+      ),
+     });
   };
   const sortByName = () => {
     setItems({

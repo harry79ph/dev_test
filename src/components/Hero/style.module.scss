@@ -1,3 +1,24 @@
 .hero {
   border-bottom: 1px solid #000;
+  position: relative;
+}
+.wrapper {
+  position: absolute;
+  top: 1rem;
+  left: 2vw;
+}
+.h1 {
+  display: inline-block;
+  margin: 3rem;
+  padding: 0.2rem 1rem;
+  color: #fff;
+  background: rgba($color: #000000, $alpha: 0.5);
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .wrapper {
+    top: 0;
+    left: 0;
+  }
 }

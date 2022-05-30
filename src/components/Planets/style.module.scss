@@ -1,9 +1,25 @@
 .main {
   margin: 3rem auto;
 }
-.tr, .tbody {
-  text-align: center;
+.btnWrapper {
+  display: flex;
+  align-items: center;
 }
 .sort {
   font-weight: 700;
+}
+.buttons {
+  display: flex;
+  flex: 1;
+  & > button {
+    flex: 1;
+    max-width: 20%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .buttons {
+    & > button {
+      max-width: 33%;
+    }
+  }
 }
